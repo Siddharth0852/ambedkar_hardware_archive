@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Ambedkar Digital Heritage - Hardware Kiosk</title>
+
+    <link rel="stylesheet" href="hardware.css">
+</head>
+
+<body>
+
+    <!-- TOP HEADER -->
+
+    <header class="topbar">
+
+        <div>
+            <div class="brand">
+                AMBEDKAR DIGITAL HERITAGE
+            </div>
+
+            <div class="subtitle">
+                Interactive Hardware Kiosk Prototype
+            </div>
+        </div>
+
+        <button class="back-btn"
+            onclick="goBack()">
+            ← Back to Archive
+        </button>
+
+    </header>
+
+
+    <!-- MAIN AREA -->
+
+    <main class="main-container">
+
+
+        <!-- KIOSK -->
+
+        <section class="kiosk-section">
+
+            <div class="kiosk">
+
+                <!-- KIOSK TOP -->
+
+                <div class="kiosk-top">
+
+                    <div class="camera">
+                        ●
+                    </div>
+
+                    <div class="kiosk-title">
+                        DIGITAL HERITAGE KIOSK
+                    </div>
+
+                    <div class="status-light">
+                        ●
+                    </div>
+
+                </div>
+
+
+                <!-- SCREEN -->
+
+                <div class="screen">
+
+                    <!-- HOME SCREEN -->
+
+                    <div id="homeScreen"
+                        class="screen-page">
+
+                        <div class="screen-title">
+                            AMBEDKAR
+                        </div>
+
+                        <div class="screen-subtitle">
+                            DIGITAL HERITAGE ARCHIVE
+                        </div>
+
+                        <div class="divider"></div>
+
+
+                        <div class="menu-grid">
+
+                            <button
+                                onclick="openPage('archive')"
+                                class="menu-btn">
+
+                                <span>📚</span>
+
+                                <strong>ARCHIVE</strong>
+
+                                <small>
+                                    Books & Documents
+                                </small>
+
+                            </button>
+
+
+                            <button
+                                onclick="openPage('timeline')"
+                                class="menu-btn">
+
+                                <span>🕐</span>
+
+                                <strong>TIMELINE</strong>
+
+                                <small>
+                                    Life & Events
+                                </small>
+
+                            </button>
+
+
+                            <button
+                                onclick="openPage('manuscripts')"
+                                class="menu-btn">
+
+                                <span>📜</span>
+
+                                <strong>MANUSCRIPTS</strong>
+
+                                <small>
+                                    Rare Documents
+                                </small>
+
+                            </button>
+
+
+                            <button
+                                onclick="openPage('speeches')"
+                                class="menu-btn">
+
+                                <span>🎙</span>
+
+                                <strong>SPEECHES</strong>
+
+                                <small>
+                                    Audio & Video
+                                </small>
+
+                            </button>
+
+
+                            <button
+                                onclick="openPage('ai')"
+                                class="menu-btn ai-btn">
+
+                                <span>🤖</span>
+
+                                <strong>AI ASSISTANT</strong>
+
+                                <small>
+                                    Ask Questions
+                                </small>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ARCHIVE -->
+
+                    <div id="archiveScreen"
+                        class="screen-page hidden">
+
+                        <button class="home-button"
+                            onclick="showHome()">
+                            🏠 HOME
+                        </button>
+
+                        <h2>📚 DIGITAL ARCHIVE</h2>
+
+                        <p>
+                            Explore Ambedkar's
+                            historical collection.
+                        </p>
+
+                        <div class="content-list">
+
+                            <div>📕 Writings & Books</div>
+
+                            <div>
+                                📘 Constitutional Debates
+                            </div>
+
+                            <div>
+                                📄 Historical Documents
+                            </div>
+
+                            <div>
+                                📷 Photographs
+                            </div>
+
+                            <div>
+                                🗂 Institutional Records
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TIMELINE -->
+
+                    <div id="timelineScreen"
+                        class="screen-page hidden">
+
+                        <button class="home-button"
+                            onclick="showHome()">
+                            🏠 HOME
+                        </button>
+
+                        <h2>🕐 TIMELINE</h2>
+
+                        <div class="timeline">
+
+                            <div>
+                                <b>1891</b>
+                                <span>Birth</span>
+                            </div>
+
+                            <div>
+                                <b>1927</b>
+                                <span>
+                                    Mahad Satyagraha
+                                </span>
+                            </div>
+
+                            <div>
+                                <b>1932</b>
+                                <span>
+                                    Poona Pact
+                                </span>
+                            </div>
+
+                            <div>
+                                <b>1947</b>
+                                <span>
+                                    Constituent Assembly
+                                </span>
+                            </div>
+
+                            <div>
+                                <b>1949</b>
+                                <span>
+                                    Constitution adopted
+                                </span>
+                            </div>
+
+                            <div>
+                                <b>1950</b>
+                                <span>
+                                    Constitution in force
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MANUSCRIPTS -->
+
+                    <div id="manuscriptsScreen"
+                        class="screen-page hidden">
+
+                        <button class="home-button"
+                            onclick="showHome()">
+                            🏠 HOME
+                        </button>
+
+                        <h2>📜 MANUSCRIPTS</h2>
+
+                        <div class="document">
+
+                            <div class="document-icon">
+                                📄
+                            </div>
+
+                            <div>
+                                <b>
+                                    Rare Manuscript Collection
+                                </b>
+
+                                <p>
+                                    Digitized historical
+                                    documents available
+                                    for research.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="document">
+
+                            <div class="document-icon">
+                                📖
+                            </div>
+
+                            <div>
+                                <b>
+                                    Annotated Writings
+                                </b>
+
+                                <p>
+                                    OCR processed archival
+                                    material.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SPEECHES -->
+
+                    <div id="speechesScreen"
+                        class="screen-page hidden">
+
+                        <button class="home-button"
+                            onclick="showHome()">
+                            🏠 HOME
+                        </button>
+
+                        <h2>🎙 SPEECHES & AUDIO</h2>
+
+                        <div class="audio-card">
+
+                            <div class="audio-icon">
+                                🎧
+                            </div>
+
+                            <div>
+
+                                <b>
+                                    Archival Audio
+                                </b>
+
+                                <p>
+                                    Audio narration module
+                                </p>
+
+                                <button
+                                    onclick="playAudio()"
+                                    class="play-btn">
+
+                                    ▶ Play Narration
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AI -->
+
+                    <div id="aiScreen"
+                        class="screen-page hidden">
+
+                        <button class="home-button"
+                            onclick="showHome()">
+                            🏠 HOME
+                        </button>
+
+                        <h2>🤖 AI RESEARCH ASSISTANT</h2>
+
+                        <p>
+                            Ask about Ambedkar's
+                            constitutional ideas.
+                        </p>
+
+                        <div class="ai-input">
+
+                            <input
+                                id="question"
+                                type="text"
+                                placeholder="Ask a question...">
+
+                            <button
+                                onclick="askAI()">
+
+                                Ask
+
+                            </button>
+
+                        </div>
+
+                        <div id="answer"
+                            class="answer">
+
+                            AI response will appear here.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KIOSK BOTTOM -->
+
+                <div class="kiosk-bottom">
+
+                    <div class="speaker">
+                        🔊
+                    </div>
+
+                    <div class="hardware-label">
+                        ESP32 • TOUCH DISPLAY
+                    </div>
+
+                    <div class="power">
+                        ⏻
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HARDWARE STATUS -->
+
+        <section class="hardware-panel">
+
+            <h2>
+                ⚙ Hardware Simulation
+            </h2>
+
+            <div class="status-card">
+
+                <div class="status-row">
+
+                    <span>
+                        ESP32 Controller
+                    </span>
+
+                    <strong class="online">
+                        ● ONLINE
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Touchscreen
+                    </span>
+
+                    <strong class="online">
+                        ● ACTIVE
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Archive Server
+                    </span>
+
+                    <strong class="online">
+                        ● CONNECTED
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Audio System
+                    </span>
+
+                    <strong class="online">
+                        ● READY
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture">
+
+                <h3>
+                    System Architecture
+                </h3>
+
+                <div class="architecture-flow">
+
+                    <div>🖥️<br>Touch Display</div>
+
+                    <span>→</span>
+
+                    <div>🔲<br>ESP32</div>
+
+                    <span>→</span>
+
+                    <div>☁️<br>Archive Server</div>
+
+                    <span>→</span>
+
+                    <div>🤖<br>AI Engine</div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="fullscreen-btn"
+                onclick="fullscreenKiosk()">
+
+                ⛶ Presentation Mode
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="hardware.js"></script>
+
+</body>
+
+</html>
